@@ -8,10 +8,11 @@ body {
 }
 
 h1 {
+  text-align: center;
   margin: auto 0;
-  margin-left: 20%;
   margin-bottom: 3%;
   margin-top: 2%;
+  font-size: 80px;
 }
 
 #avail {
