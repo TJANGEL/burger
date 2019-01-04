@@ -1,7 +1,10 @@
 body {
   font-family: "Germania One", cursive;
   width: 100%;
+  height: auto;
   background-image: url("../img/burger_animation.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -14,19 +17,27 @@ h1 {
 #avail {
   float: left;
   margin-right: 6%;
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 #devoured {
-  /* float: left; */
+  float: right;
+  margin-right: 15%;
+  margin-left: 6%;
 }
 
 li {
   font-size: 20px;
   list-style-type: none;
+  padding: 5px;
+}
+
+li.btn {
+  padding-left: 10px;
 }
 
 #add {
   clear: both;
-  margin-left: 25%;
+  margin-left: 15%;
+  padding-top: 3%;
 }
