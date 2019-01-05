@@ -15,13 +15,13 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/", function(req, res) {
+router.post("/burgers", function(req, res) {
   burger.insertOne(req.body.burger_name, function() {
     res.redirect("/");
   });
 });
 
-router.put("/", function(req, res) {
+router.put("/burgers/:id", function(req, res) {
   var id = req.params.id;
 
   console.log("id", id);
