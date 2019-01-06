@@ -1,35 +1,36 @@
-// Pull in required dependencies
+// dependencies
 var express = require("express");
-
 var router = express.Router();
-
 var burger = require("../models/burger.js");
 
+// gets all the burgers in the db
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
-    var hbsObject = {
-      burgers: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
+    res.render("index", { burgers: data });
   });
 });
 
+// adds a burger
 router.post("/", function(req, res) {
-  burger.insertOne(req.body.burger_name, function() {
+  console.log(req.body);
+  burger.insertOne(req.body.name, function() {
     res.redirect("/");
   });
 });
 
+// updates a burger entry
 router.put("/:id", function(req, res) {
-  var id = req.params.id;
-
-  console.log("id", id);
-
-  burger.updateOne(id, function() {
+  console.log(req.body);
+  burger.updateOne(req.params.id, function() {
     res.redirect("/");
   });
 });
 
-// Export routes for server.js to use.
+// deletes a burger
+router.delete("/:id", function(req, res) {
+  burger.deleteOne(req.params.id, function(result) {
+    res.redirect("/");
+  });
+});
+
 module.exports = router;

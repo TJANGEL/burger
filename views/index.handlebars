@@ -2,7 +2,7 @@
 <br>
 
 <div id='avail'>
-    <h2>Uneaten Burgers:</h2>
+    <h2>Burger Menu</h2>
     <ul>
         {{#each burgers}} {{#unless this.devoured}}
         <li>
@@ -23,7 +23,10 @@
     <ul>
         {{#each burgers}} {{#if this.devoured}}
         <li>
-            {{this.id}}. {{this.burger_name}}
+            <form class="delete-form form-group" action="/{{this.id}}?_method=DELETE" method="POST">
+                {{this.burger_name}}
+                <input type="image" class="trash-icon" src="assets/img/trash.png" alt="trash icon" />
+            </form>
         </li>
         {{/if}} {{/each}}
     </ul>
