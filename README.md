@@ -26,5 +26,5 @@ Click [here](https://infinite-eyrie-44190.herokuapp.com/) to view heroku deploye
 - [Express.js](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 - [nodemon](https://nodemon.io/)
 - [Bootstrap](https://getbootstrap.com/) - CSS Framework
-- [express-handlebars]
-- [mysql]
+- [express-handlebars](https://www.npmjs.com/package/express-handlebars) -views engine
+- [mysql](https://www.mysql.com/) - database
