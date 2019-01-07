@@ -1,8 +1,8 @@
-<h1>Eat Da Burger</h1>
+<h1>Eat Da Burger, Eat it Now!</h1>
 <br>
 
 <div id='avail'>
-    <h2>Burger Menu</h2>
+    <h2>Burgers Available to Eat:</h2>
     <ul>
         {{#each burgers}} {{#unless this.devoured}}
         <li>
@@ -18,15 +18,12 @@
     </ul>
 </div>
 <div id='devoured'>
-    <h2>Devoured Burgers:</h2>
+    <h2>Burgers That Have <br>Been Devoured: </h2>
 
     <ul>
         {{#each burgers}} {{#if this.devoured}}
         <li>
-            <form class="delete-form form-group" action="/{{this.id}}?_method=DELETE" method="POST">
-                {{this.burger_name}}
-                <input type="image" class="trash-icon" src="assets/img/trash.png" alt="trash icon" />
-            </form>
+            {{this.id}}. {{this.burger_name}}
         </li>
         {{/if}} {{/each}}
     </ul>
@@ -39,7 +36,7 @@
         <div class="form-group">
             <label for="dab">Burger Name:</label>
             <input type="text" id="dab" name="burger_name">
-            <button class="btn btn-primary ml-1" type="submit">Add Burger</button>
+            <button class="btn btn-primary ml-2" type="submit">Add Burger</button>
         </div>
     </form>
 </div>
