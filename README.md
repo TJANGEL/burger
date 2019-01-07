@@ -8,7 +8,7 @@ Each burger in the waiting area also has a `Eat Me!` button. When the user click
 
 Your app will store every burger in a database, whether devoured or not.
 
-![burger](https://github.com/TJANGEL/FriendFinder/blob/master/eat_da_burger_screenshot.png)
+![burger](https://github.com/TJANGEL/burger/blob/master/public/assets/img/eat_da_burger_screenshot.png)
 
 ## Heroku Deployed Link
 
