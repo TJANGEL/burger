@@ -1,6 +1,9 @@
+// Import connection
 var connection = require("../config/connection.js");
 
+// object for all statement functions
 var orm = {
+  // select all
   selectAll: function(cb) {
     var queryString = "SELECT * FROM burgers";
     connection.query(queryString, function(err, result) {
@@ -11,6 +14,7 @@ var orm = {
     });
   },
 
+  // add
   insertOne: function(burger, cb) {
     var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
     connection.query(queryString, [burger], function(err, result) {
@@ -21,6 +25,7 @@ var orm = {
     });
   },
 
+  // update
   updateOne: function(id, cb) {
     var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
 
